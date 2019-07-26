@@ -54,15 +54,6 @@ public class Application {
             // 	log.info(bauer.toString());
             // }
             log.info("");
-
-            //my search
-            log.info("!!!!!!!!!!!!!!!!!");
-            if (repository.existsById(6L)){
-                log.info("TRUE");
-            } else {
-                log.info("FALSE");
-            }
-            log.info("!!!!!!!!!!!!!!!!!");
         };
     }*/
 

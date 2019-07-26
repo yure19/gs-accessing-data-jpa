@@ -29,6 +29,7 @@ public class CustomerService implements ICustomerService {
 
     public Customer updateCustomer(Long id, String firstName, String lastName) throws NoSuchElementException {
         Customer customer = customerRepository.findById(id).get();
+
         customer.setFirstName(firstName);
         customer.setLastName(lastName);
         save(customer);
@@ -37,7 +38,7 @@ public class CustomerService implements ICustomerService {
 
     public Customer deleteCustomer(Long id) throws NoSuchElementException{
         Customer customer = customerRepository.findById(id).get();
-        customerRepository.deleteById(id);
+        customerRepository.delete(customer);
         return customer;
     }
 }
